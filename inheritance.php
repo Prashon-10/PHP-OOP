@@ -1,6 +1,6 @@
 <?php
 
-trait BCA
+trait BCA //just like multiple inheritance.
 {
     public $x = 10;
 }
