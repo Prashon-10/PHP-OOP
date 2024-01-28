@@ -4,13 +4,31 @@
 class Students
 {
 
-    public static $x = 100;
-    public static function demo()
+    // public static $x = 100;
+    // public static function demo()
+    // {
+    //     // echo "This is static method";
+    //     //static huda we have to use self.
+    //     echo self::$x;
+    // }
+
+    public function __construct()
     {
-        // echo "This is static method";
-        //static huda we have to use self.
-        echo self::$x;
+        echo "I am from Constructor.<br>";
+    }
+
+    public function test(){
+        echo "I am form Test method.<br>";
+    }
+
+    // runs at the very end...
+    public function __destruct(){
+        echo "I am from Destructor.";
     }
 }
 
-Students::demo();
+$obj = new Students();
+$obj->test();
+// new Students();
+
+// Students::demo();
